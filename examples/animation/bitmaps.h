@@ -1,3 +1,5 @@
+// This bitmap has been designed by JO3RI http://www.JO3RI.be
+
 const byte PROGMEM wizard_bitmaps[] =
 {
   24,24, // width and height
