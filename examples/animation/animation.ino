@@ -12,6 +12,7 @@
 
 Arduboy arduboy;
 Sprites sprites (arduboy);
+byte frameCount = 0;
 
 void setup() {
   arduboy.start();
@@ -20,6 +21,10 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  arduboy.clearDisplay();
+  sprites.draw(0,0,wizard_bitmaps,frameCount);
+  frameCount++;
+  if (frameCount > 3) frameCount= 0;
+  arduboy.display();
+  delay(180);
 }
